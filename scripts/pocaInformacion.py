@@ -7,7 +7,7 @@ print("Borra filas con menos del 50 de datos")
 cantidad = len(vh.columns) * 0.5
 datosBorrar = vh[vh.isna().sum(axis=1) >= cantidad]
 
-print("Se van a borar", len(datosBorrar), "filas")
+print("Se van a borrar", len(datosBorrar), "filas")
 print(datosBorrar[['id', 'manufacturer', 'model']])
 print("Borrando...")
 vh.dropna(thresh=cantidad, inplace=True)
